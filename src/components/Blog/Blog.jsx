@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { FaBookmark } from 'react-icons/fa';
 const Blog = ({blog, handelBookmark,handelMarkAsRead}) => {
-    const{cover,title,reading_time,author_img,author_name,publish_date,hashtags} = blog
+    const{id,cover,title,reading_time,author_img,author_name,publish_date,hashtags} = blog
     return (
         <div>
             <div className="card  bg-base-100 mr-4 mb-8">
@@ -35,7 +35,7 @@ const Blog = ({blog, handelBookmark,handelMarkAsRead}) => {
                 }
                 </p>
                 <button 
-                onClick={() => handelMarkAsRead(reading_time)}
+                onClick={() => handelMarkAsRead(reading_time, id)}
                 className=' underline text-blue-400 text-start'
                 >Mark As Read</button>
             </div>
